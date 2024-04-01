@@ -1,6 +1,8 @@
 package us.mattgreen;
 
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -10,10 +12,13 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Talkable> zoo = new ArrayList<>();
 
+
         // Lines to Replace Begin Here
-        zoo.add(new Dog(true, "Bean"));
-        zoo.add(new Cat(9, "Charlie"));
-        zoo.add(new Teacher(44, "Stacy Read"));
+//        zoo.add(new Dog(true, "Bean"));
+//        zoo.add(new Cat(9, "Charlie"));
+//        zoo.add(new Teacher(44, "Stacy Read"));
+        Menu.addingAnimals();
+
         // End Lines to Replace
 
         for (Talkable thing : zoo) {
@@ -34,4 +39,5 @@ public class Main {
         System.out.println(p.getName() + " says=" + p.talk());
         outFile.fileWrite(p.getName() + " | " + p.talk());
     }
+
 }
