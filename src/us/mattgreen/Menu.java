@@ -11,7 +11,8 @@ public class Menu {
         int userInput = 0;
         System.out.println("Select the number of the animal you wish to add. \n" +
                 "1. Dog\n" +
-                "2. Cat");
+                "2. Cat\n " +
+                "3. Print List");
         userInput= sc.nextInt();
         if(userInput == 0){
             System.out.println("select either 1 or 2.");
@@ -29,6 +30,10 @@ public class Menu {
             int Killcount = sc.nextInt();
             zoo2.add(new Cat(Killcount,name));
 
+        }else if(userInput == 3){
+            for(Talkable object: zoo2){
+                System.out.println(object);
+            }
         }
 
     }
